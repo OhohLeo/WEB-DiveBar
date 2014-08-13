@@ -1,0 +1,49 @@
+body {
+    background-color: #000010;
+}
+
+ul#main_menu {
+    list-style-type : none;
+    text-align: center;
+}
+
+ul#main_menu li {
+    display : inline;
+    padding : 0 0.5em;
+    list-style: none;
+}
+
+ul#main_menu a {
+    display:inline-block;
+    margin: 0 30px;
+}
+
+a.left {
+    float:left;
+}
+
+a.glow, a.glow:hover, a.glow:focus {
+    text-decoration: none;
+    color: #4E4F4F;
+    text-shadow: none;
+    -webkit-transition: 500ms linear 0s;
+    -moz-transition: 500ms linear 0s;
+    -o-transition: 500ms linear 0s;
+    transition: 500ms linear 0s;
+    outline: 0 none;
+}
+
+a.glow:hover, a.glow:focus  {
+    color: #FFCC33;
+    text-shadow: -1px 1px 8px #ff3300, 1px -1px 8px #fff;
+}
+
+hr {
+    color: #242423;
+}
+
+audio.music {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

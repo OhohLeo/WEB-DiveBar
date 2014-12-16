@@ -13,31 +13,6 @@ div#logo_banner {
     text-align: center;
     padding-top: 40px;
     cursor: pointer;
-
-    -webkit-animation: blink 3s linear infinite 0s;
-    -moz-animation: blink 3s linear infinite 0s;
-    -ms-animation: blink 3s linear infinite 0s;
-    -o-animation: blink 3s linear infinite 0s;
-}
-
-@-webkit-keyframes blink {
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
-}
-
-@-moz-keyframes blink {
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
-}
-
-@-ms-keyframes blink {
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
-}
-
-@-o-keyframes blink {
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
 }
 
 div#accueil {
@@ -71,15 +46,15 @@ div#last_infos {
 
 
 iframe.last_infos {
-   width: 150px;
-   height: 120px;
-   margin-top: -1%;
-   margin-left: 25%;
-   border-width: 1px;
-   border-style: solid;
-   border-color: #FFF;
-   display:block;
-   float:left;
+    width: 150px;
+    height: 120px;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFF;
+    display:block;
+    float:left;
 }
 
 div#accueil_menu {
@@ -95,8 +70,8 @@ div#accueil_menu {
 hr#menu {
     width: 100%;
     height: 6px;
-    margin: 0px;
-    border: 0px;
+    margin: 0;
+    border: 0;
 }
 
 img#menu {
@@ -119,25 +94,25 @@ div#menu {
 }
 
 ul#menu {
-    margin: 0%;
+    margin: 0;
 }
 
 ul#menu li {
     cursor: pointer;
     display: inline-block;
-    margin: 0px 10px;
-    background: none repeat scroll 0% 0% #3F0000;
-    border-top-right-radius: 45px;
-    border-top-left-radius: 45px;
-    border-width: 1px 0px 0px 0px;
+    margin: 0 10px;
+    background: none repeat scroll 0 0 #3F0000;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-width: 1px 0 0;
     border-style: solid;
     border-color: #EDC190;
     padding: 5px 20px 2px;
 }
 
 ul#members {
-    margin: 5% 0%;
-    padding: 0%;
+    margin: 5% 0;
+    padding: 0;
 }
 
 li {
@@ -150,7 +125,7 @@ li.menu {
 }
 
 li.menu:hover, li.menu:focus {
-    color: #FFFFFF;
+    color: #FFF;
     -webkit-transition: 500ms linear 0s;
     -moz-transition: 500ms linear 0s;
     -o-transition: 500ms linear 0s;
@@ -162,8 +137,8 @@ li.menu:hover, li.menu:focus {
 li.members {
     border-top: 1px solid #FFF;
     border-width: 1px;
-    margin: 2% 0%;
-    border-color: white;
+    margin: 1% 0;
+    border-color: #FFF;
     background-repeat: no-repeat;
 }
 
@@ -175,8 +150,8 @@ div#news:before {
     background-attachment: fixed;
     width: 100%;
     height: 100%;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     position: absolute;
     z-index: -1;
     -webkit-background-size:cover;
@@ -187,15 +162,32 @@ div#news:before {
 }
 
 div#news, div#albums {
-    background-color: rgba(63, 0, 0, 0.6);
+    background-color: rgba(63, 0, 0, .6);
+}
+
+div.biography {
+    display: block;
+    width: 40%;
+    margin-top: 15%;
+    padding: 0;
+    border: 0;
+    text-align: justify;
+}
+
+div.left {
+    margin-right: 45%;
+}
+
+div.right {
+   margin-left: 45%;
 }
 
 ul#news {
-    margin: 0% 5%;
+    margin: 0 5%;
 }
 
 ul#albums {
-    margin: 0% 10%;
+    margin: 0 10%;
 }
 
 h2.news, h2.albums {
@@ -207,16 +199,18 @@ h2.news, h2.albums {
 
 h2.name {
     width: 50%;
+    height: 10%;
     text-align: center;
     border-bottom-right-radius: 45px;
     border-bottom-left-radius: 45px;
-    border-width: 0px 3px 1px;
+    border-width: 0 3px 1px;
     border-style: solid;
     border-color: #EDC190;
-    padding: 0px 0px 10px;
-    background: none repeat scroll 0% 0% #080224;
+    padding: 0 0 10px;
+    background: none repeat scroll 0 0 #080224;
     transform: translateY(-1px);
-    margin: 0px 0px 38px 0px;
+    margin: 0 0 38px;
+    cursor: pointer;
 }
 
 a.link {
@@ -249,9 +243,9 @@ div#albums:before {
     z-index: -1;
     width: 100%;
     height: 100%;
-    top: 0%;
-    left: 0%;
-    background-image:url(img/albums_bg/0.png);
+    top: 0;
+    left: 0;
+    background-image:url(img/albums/bg.png);
     background-position: center;
     background-size: 65% auto;
     background-repeat: no-repeat;
@@ -300,13 +294,13 @@ div#albums:before {
 
 div#albums:after {
   content: "";
-  background-image: url(img/albums_bg/bg.jpg);
+  background-image: url(img/albums/bg.jpg);
   background-position: center center;
   background-repeat: repeat;
   width: 100%;
   height: auto;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   position: absolute;
   z-index: -2;
 }
@@ -314,15 +308,15 @@ div#albums:after {
 div#videos:after {
   content: "";
   position: absolute;
-  background-image: url(img/videos/1.jpg);
+  background-image: url(img/videos/bg.jpg);
   background-position: center;
   background-size: 50% auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
   height: 100%;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   z-index: -2;
 
   -webkit-animation: movie 2s linear infinite 0s;
@@ -332,46 +326,46 @@ div#videos:after {
 }
 
 @-webkit-keyframes movie {
-    0%   { opacity: 0.2; }
-    20%  { opacity: 0.3; }
-    40%  { opacity: 0.5; }
-    60%  { opacity: 0.4; }
-    80%  { opacity: 0.3; }
-    100% { opacity: 0.2; }
+    0%   { opacity: .2; }
+    20%  { opacity: .3; }
+    40%  { opacity: .5; }
+    60%  { opacity: .4; }
+    80%  { opacity: .3; }
+    100% { opacity: .2; }
 }
 
 @-moz-keyframes movie {
-      0%   { opacity: 0.2; }
-    20%  { opacity: 0.3; }
-    40%  { opacity: 0.5; }
-    60%  { opacity: 0.4; }
-    80%  { opacity: 0.3; }
-    100% { opacity: 0.2; }
+    0%   { opacity: .2; }
+    20%  { opacity: .3; }
+    40%  { opacity: .5; }
+    60%  { opacity: .4; }
+    80%  { opacity: .3; }
+    100% { opacity: .2; }
 }
 
 @-ms-keyframes movie {
-    0%   { opacity: 0.2; }
-    20%  { opacity: 0.3; }
-    40%  { opacity: 0.5; }
-    60%  { opacity: 0.4; }
-    80%  { opacity: 0.3; }
-    100% { opacity: 0.2; }
+    0%   { opacity: .2; }
+    20%  { opacity: .3; }
+    40%  { opacity: .5; }
+    60%  { opacity: .4; }
+    80%  { opacity: .3; }
+    100% { opacity: .2; }
 }
 
 @-o-keyframes movie {
-    0%   { opacity: 0.2; }
-    20%  { opacity: 0.3; }
-    40%  { opacity: 0.5; }
-    60%  { opacity: 0.4; }
-    80%  { opacity: 0.3; }
-    100% { opacity: 0.2; }
+    0%   { opacity: .2; }
+    20%  { opacity: .3; }
+    40%  { opacity: .5; }
+    60%  { opacity: .4; }
+    80%  { opacity: .3; }
+    100% { opacity: .2; }
 }
 
 p.date {
     float: left;
-    color: white;
+    color: #FFF;
     font: 28px/30px "Courier New", cursive;
-    font-weight: bold;
+    font-weight: 400;
     width: 250px;
     margin: 70px 10px 10px;
     padding: 5px;
@@ -393,25 +387,26 @@ h2.title {
 
 div#contact {
     padding-top: 20px;
-    background-image:url(img/contact_bg.jpg);
+    background-image:url(img/contact/bg.jpg);
     background-position: left top;
     background-repeat: repeat-x;
 }
 
 hr {
     margin: 1% 30%;
+    clear: left;
 }
 
 h2 {
     font-size: 30px;
     font-family: 'PT Sans', Arial;
-    color: white;
+    color: #FFF;
 }
 
 p {
     font-size: 20px;
     font-family: Arial;
-    color: white;
+    color: #FFF;
 }
 
 label {
@@ -433,18 +428,18 @@ input, textarea {
     padding:10px;
     border:2px solid #F5C5C5;
     border-radius:8px;
-    box-shadow:10px 10px 20px #C0C0C0 inset;
+    box-shadow:10px 10px 20px silver inset;
     text-align: center;
-    margin: 1% 1%;
+    margin: 1%;
 }
 
 img.zoom {
-    margin: 1% 1%;
-    -webkit-transform: scale(0.8, 0.8);
-    -moz-transform: scale(0.8, 0.8);
-    -ms-transform: scale(0.8, 0.8);
-    -o-transform: scale(0.8, 0.8);
-    -transform: scale(0.8, 0.8);
+    margin: 1%;
+    -webkit-transform: scale(.8, .8);
+    -moz-transform: scale(.8, .8);
+    -ms-transform: scale(.8, .8);
+    -o-transform: scale(.8, .8);
+    -transform: scale(.8, .8);
 
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
@@ -462,16 +457,16 @@ img.zoom {
 }
 
 img.zoom:hover {
-    -webkit-transform: scale(0.9, 0.9);
-    -moz-transform: scale(0.9, 0.9);
-    -ms-transform: scale(0.9, 0.9);
-    -o-transform: scale(0.9, 0.9);
-    -transform: scale(0.9, 0.9);
+    -webkit-transform: scale(.9, .9);
+    -moz-transform: scale(.9, .9);
+    -ms-transform: scale(.9, .9);
+    -o-transform: scale(.9, .9);
+    -transform: scale(.9, .9);
 }
 
 img.fade {
-    margin: 1% 1%;
-    opacity: 0.5;
+    margin: 1%;
+    opacity: .5;
     cursor: pointer;
 }
 

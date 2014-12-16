@@ -7,6 +7,7 @@
     <link href="//fonts.googleapis.com/css?family=Gentium+Basic:400italic,400,700italic,700" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=PT+Sans:400italic,400,700italic,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="divebar.css">
+    <link href="css/nanogallery.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div id="fb-root"></div>
@@ -18,7 +19,9 @@
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
     <div id="logo_banner">
-      <img class="start" id="logo_banner" src="img/accueil/logo.png"></img>
+      <img class="start logo" id="generic" src="img/logos/generic.png"></img>
+      <img class="start logo" style="display: none;" id="photos" src="img/logos/photos.jpg"></img>
+      <img class="start logo" style="display: none;" id="contact" src="img/logos/contact.png"></img>
     </div>
     <div id="accueil" class="banner">
       <ul>
@@ -41,16 +44,22 @@
         <li id="lyrics" class="menu">Paroles</li>
         <li id="contact" class="menu">Contact</li>
       </ul>
+      <div id="message" style="display: none;">
+	  <p class="random">"Un dive bar, c'est un coin sombre et vivant, un comptoir moins cher qu'ailleurs recelant son lot de buveurs locaux et artistes paumés, où chaque 3, 4 ou 5ème verre est offert, où l'on prend rendez-vous avec une bonne dose de désespoir ou de contentement au verre."</br>Laurent P. Weber</p>
+	  <p class="random">Une explosion constante, une energie tombée de scène, des mélodies envoutantes et sans scrupules.</p>
+	  <p class="random">Définition : Lieu de débauche, de vice caché, où règne une atmosphère douteuse...</p>
+	  <p class="random">Entrez dans l'univers du Dive Bar !</p>
+	  <p class="random">Un monde énervé, puissant et fantasmagorique... au risque de vous y plaire...!</p>
+      </div>
+
       <div id="last_infos">
-	<p style="text-align: justify; margin: 2% 10%;">"Un dive bar, c'est un coin sombre et vivant, un comptoir moins cher qu'ailleurs recelant son lot de buveurs locaux et artistes paumés, où chaque 3, 4 ou 5ème verre est offert, où l'on prend rendez-vous avec une bonne dose de désespoir ou de contentement au verre."</p>
-	<p> Laurent P. Weber</p>
-        <hr>
-	<div class="fb-comments" data-href="https://www.facebook.com/pages/Dive-Bar/295570962262?fref=ts" data-numposts="5" data-colorscheme="dark"></div>
-	<hr>
+	<h2>Dive Bar</h2>
+	<p>Groupe de Rock français situé en région parisienne.</p>
+	<p>Norman, je te laisse écrire la suite!</p>
 	<h2>Vidéos : Session "Monstres dans la cave"</h2>
 	<iframe class="last_infos" src="http://www.youtube.com/embed/0z_L1nYsWnI"></iframe>
 	<iframe class="last_infos" src="http://www.youtube.com/embed/QrECziN8XqY"></iframe>
-	<hr>
+	<div class="fb-comments" data-href="https://www.facebook.com/pages/Dive-Bar/295570962262?fref=ts" data-numposts="5" data-colorscheme="dark"></div>
 	<div id="bottom_menu" align="center">
 	  <a class="link" href="https://www.facebook.com/pages/Dive-Bar/295570962262?fref=ts">
 	    <img class="zoom" src="img/facebook.png"></img>
@@ -136,6 +145,7 @@
 	  <a class="img_albums" href="http://grooveshark.com/#!/album/Le+Revenant+BOF/9831544">
 	    <img class="zoom" src="img/albums/le_revenant.jpg"></img>
 	  </a>
+	  <p class="albums">Bande original du court métrage "Le Revenant", réalisé en 2012 par Victor Druillet et Norman Jangot, avec Thibault Fraisse dans le rôle principal.<br><br>Un jeune homme pense qu'il suffit de le vouloir pour ne pas mourir. Il saute de son balcon... Et ça marche! Mais pas seulement, il développe alors un sixième sens qui lui permet de percevoir une étrange silhouette noire que personne d’autre ne semble remarquer...</p>
 	</li>
       </ul>
     </div>
@@ -143,23 +153,52 @@
       <ul id="members">
 	<li id="norman_jangot" class="members">
 	  <h2 class="name">Norman Jangot</h2>
-	  <p class="biography">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <div class="biography right">
+	      <p>Chanteur et guitariste du groupe depuis sa formation
+		  en 2008, il prend des cours de chant avec <a href="http://caroline-rose.fr">Caroline Rose</a>.</p>
+	      <p>Il est l'auteur des paroles des chansons, souvent
+		  teintés de macabre et de double sens.</p>
+	      <p>Il est aussi réalisateur de court-métrage et de
+		  web-série dont <a href="http://lestutosdelavie.com">Les Tutos de la Vie</a>.  Il affine ses
+		  talents derrière la caméra en réalisant en 2011 le
+		  clip "Hurt Time" pour le groupe puis en 2014, la
+		  session "Les Monstre dans la Cave".</p>
+	  </div>
 	</li>
 	<li id="leo_martin" class="members">
 	  <h2 class="name">Léo Martin</h2>
-	  <p class="biography">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <div class="biography left">
+	    <p>Violoniste de formation classique formé à l’école de
+	      Musique de Castelnaudary auprès de Céline Lesage. Il
+	      découvre et s’initie aux musiques traditionnelles
+	      bretonne et irlandaise et continue actuellement la
+	      pratique classique au Conservatoire
+	      d’Issy-les-Moulineaux.</p>
+	    <p>Il rencontre Dive Bar en Mai 2013 et développe ses
+	      connaissances webs en concevant le site internet du
+	      groupe.</p>
+	    <p>Il fait aussi partie d'un trio classique
+	      <a href="http://adessotrio.free.fr">Adesso Trio</a> avec
+	      Gabrielle Rousseau et Tania Pamard et d'un duo avec
+	      Erwan Houssay, flûtiste breton.</p>
+	    <p>Il gagne sa croûte comme ingénieur en système embarqué,
+	      se nourrissant d'une curiosité sans limite!!</p>
+	  </div>
 	</li>
 	<li id="jeremie_girardot" class="members">
 	  <h2 class="name">Jérémie Girardot</h2>
-	  <p class="biography">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <div class="biography">
+	  </div>
 	</li>
 	<li id="mathieu_andrieux" class="members">
 	  <h2 class="name">Mathieu Andrieux</h2>
-	  <p class="biography">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <div class="biography">
+	  </div>
 	</li>
 	<li id="madjid_djebbi" class="members">
 	  <h2 class="name">Madjid Djebbi</h2>
-	  <p class="biography">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  <div class="biography">
+	  </div>
 	</li>
       </ul>
     </div>
@@ -177,6 +216,64 @@
 	  <h2>Hurt Time (2012)</h2>
 	  <iframe src="http://www.youtube.com/embed/kgyDqL4hx6s"></iframe>
 	</li>
+    </div>
+    <div id="photos" class="menu" align="center" style="display: none;">
+    </div>
+    <div id="lyrics" class="menu" align="center" style="display: none;">
+	<h1>Rosa</h1>
+	<p>Oh toi<br>
+	    Toi qui enfle en moi<br>
+	    Oh oui toi<br>
+	    Qui me dissuadera<br>
+	    De m’asseoir et de boire<br>
+	    De célébrer le trône</p>
+	<p>Oh toi<br>
+	    Qui me surprendra<br>
+	    Les lèvres aux abois<br>
+	    Brûlante au bout des doigts<br>
+	    A chaque fois<br>
+	    Que je tombe un bourgogne<br>
+	    Que j'embrasse le trombone<br>
+	    Oh toi</p>
+	<p>Oh toi,<br>
+	    Toi qui n'est plus là<br>
+	    Je me vide déjà<br>
+	    De toi</p>
+	<p>Tu résonnes encore au rythme du palpitant<br>
+	    Mes entrailles te déclarent lieutenant</p>
+	<p>Aux portes de l'enfer<br>
+	    Le carbone et le souffre<br>
+	    Dynamite mortifère<br>
+	    Pétarade dans le gouffre</p>
+	<p>Oh toi<br>
+	    asséché sans toi<br>
+	    Tu me manque déjà<br>
+	    Tu me manque déjà</p>
+	<h1>Monsieur Personne</h1>
+	<p>Sur un air nocturne, une levée de fantômes<br>
+	    Menée par une diable au dessin improbable<br>
+	    Soulevant les tombes oubliés sous le sable<br>
+	    Exhuma lentement de putrides arômes</p>
+	<p>Sous une lune tordue, mister Nobody est revenu</p>
+	<p>Soufflant sur les cendres d'un des corps mal enterré<br>
+	    Par un fossoyeur à la descente aisée<br>
+	    Surgit de ces chairs fragmentées, une goule<br>
+	    Au fond tendre, déversant des versets mal contenus.</p>
+	<p>Sous une lune tordue, mister Nobody est revenu</p>
+	<p>D'une lâchée de pisse spontanée comme une fissure de l'aorte<br>
+	    Se forma sous son séant une marre d'acide blanc<br>
+	    Lui permettant d'éviter les balles Dellamorte<br>
+	    Et de se tirer tout de dédain, par la grande porte d'entrée</p>
+	<p>Sous une lune tordue, mister Nobody est revenu</p>
+	<p>La recette simple décoction<br>
+	    De rétine d'alligator et<br>
+	    Liqueur blême, un soupçon<br>
+	    Nous ramène entre les porcs<br>
+	    Sacrifiés à la décomposition<br>
+	    Un sourire, un effort<br>
+	    On accueil le règne, le règne des morts<br>
+	    On accueil le règne, le règne des morts<br>
+	    On accueil le règne, le règne des morts</p>
     </div>
     <div id="contact" class="menu" align="center" style="display: none;">
       <form id="contact" method="post" on-submit="">
@@ -212,5 +309,6 @@
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/unslider.js"></script>
   <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script src="js/jquery.nanogallery.min.js"></script>
   <script src="js/divebar.js"></script>
 </html>

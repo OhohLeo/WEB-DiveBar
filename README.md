@@ -3,6 +3,9 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+17/12/2014 Leo
+ * à finir : Page d'accueil & mail
+
 16/12/2014 Leo
  * 2ème version du site
  * à finir : bordure, onglet Paroles, onglet Membre & Page d'accueil

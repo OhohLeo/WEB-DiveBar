@@ -52,6 +52,8 @@ $(window).load(function() {
 	$is_accueil = 1;
 	$last_menu = null;
 	$handle_color('#3F0000', '#EDC190');
+	$logos.hide();
+	$logo_generic.show();
 	$accueil.slideDown();
 	$menu.hide();
 	$menus.hide();
@@ -183,5 +185,16 @@ $(window).load(function() {
 
 	$members_to_hide.hide();
 	$is_already_enter.children().fadeIn(500);
+    });
+
+    var $h2_lyrics = $("h2.lyrics");
+    var $div_lyrics = $("div.lyrics");
+
+    $div_lyrics.hide();
+
+    $h2_lyrics.on("click", function() {
+	$div_lyrics.hide();
+	console.log("CLICK " + $(this).next("div").attr('class'));
+	$(this).next("div").fadeIn(1000);
     });
 });

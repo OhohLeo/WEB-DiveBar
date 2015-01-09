@@ -1,6 +1,7 @@
 var $body    = $("body");
 var $accueil = $("div#accueil");
 var $accueil_menu = $("div#accueil_menu");
+var $message = $("div#message");
 var $menu    = $("div#menu");
 var $menus   = $("div.menu");
 var $li_menu = $("li.menu");
@@ -59,6 +60,7 @@ $(window).load(function() {
 	$menus.hide();
 	$data.start();
 	$accueil_menu.show();
+	$message.show();
     });
 
     var $load_photos = function($div_photos) {
@@ -108,6 +110,7 @@ $(window).load(function() {
 	// on gère le cas particulier de l'accueil
 	if ($is_accueil) {
 	    $random_msg();
+	    $message.hide();
 	    $accueil_menu.hide();
 	    $data.stop();
 	    $accueil.slideUp();

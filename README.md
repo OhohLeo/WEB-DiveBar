@@ -3,6 +3,10 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+11/01/2014 Leo
+ * tools/deploy.pl : script de déploiement
+ *
+
 17/12/2014 Leo
  * à finir : Page d'accueil & mail
 

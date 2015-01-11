@@ -144,7 +144,7 @@ li.members {
 
 div#news:before {
     content: "";
-    background-image:url(img/news/bg.jpg);
+    background-image:url(../img/news/bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -255,7 +255,7 @@ div#albums:before {
     height: 100%;
     top: 0;
     left: 0;
-    background-image:url(img/albums/bg.png);
+    background-image:url(../img/albums/bg.png);
     background-position: center;
     background-size: 65% auto;
     background-repeat: no-repeat;
@@ -304,7 +304,7 @@ div#albums:before {
 
 div#albums:after {
   content: "";
-  background-image: url(img/albums/bg.jpg);
+  background-image: url(../img/albums/bg.jpg);
   background-position: center center;
   background-repeat: repeat;
   width: 100%;
@@ -318,7 +318,7 @@ div#albums:after {
 div#videos:after {
   content: "";
   position: absolute;
-  background-image: url(img/videos/bg.jpg);
+  background-image: url(../img/videos/bg.jpg);
   background-position: center;
   background-size: 50% auto;
   background-repeat: no-repeat;
@@ -379,7 +379,7 @@ p.date {
     width: 250px;
     margin: 70px 10px 10px;
     padding: 5px;
-    background-image: url('img/news/date_bg.jpg');
+    background-image: url('../img/news/date_bg.jpg');
     border: 2px solid #CC5353;
     border-radius: 13px;
     text-shadow: -1px 1px 20px #FFF;
@@ -397,7 +397,7 @@ h2.title {
 
 div#contact {
     padding-top: 20px;
-    background-image:url(img/contact/bg.jpg);
+    background-image:url(../img/contact/bg.jpg);
     background-position: left top;
     background-repeat: repeat-x;
 }

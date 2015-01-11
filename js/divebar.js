@@ -1,6 +1,7 @@
 var $body    = $("body");
 var $accueil = $("div#accueil");
 var $accueil_menu = $("div#accueil_menu");
+var $div_lyrics = $("div.lyrics");
 var $message = $("div#message");
 var $menu    = $("div#menu");
 var $menus   = $("div.menu");
@@ -107,6 +108,9 @@ $(window).load(function() {
             return;
 	}
 
+	// on cache les paroles
+	$div_lyrics.hide();
+
 	// on gère le cas particulier de l'accueil
 	if ($is_accueil) {
 	    $random_msg();
@@ -192,8 +196,6 @@ $(window).load(function() {
 
     var $h2_lyrics = $("h2.lyrics");
     var $div_lyrics = $("div.lyrics");
-
-    $div_lyrics.hide();
 
     $h2_lyrics.on("click", function() {
 	$div_lyrics.hide();

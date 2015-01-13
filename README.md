@@ -3,9 +3,11 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+13/01/2015 Leo
+ * ajout du formulaire de contact (à finir)
+
 11/01/2014 Leo
  * tools/deploy.pl : script de déploiement
- *
 
 17/12/2014 Leo
  * à finir : Page d'accueil & mail

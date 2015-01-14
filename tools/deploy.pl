@@ -15,31 +15,36 @@ use feature 'say';
 
 my %AUTHORISED = map { $_ => 1 } qw(js css img);
 
-my($action, $host, $login, $password, $directory, $output, $help, @to_compress);
+my($action, $host, $login, $password, $directory, $output,
+   $gmail_login, $gmail_password, $help, @to_compress);
 
 GetOptions(
-    'action|a=s'     => \$action,
-    'host|h=s'       => \$host,
-    'login|l=s'      => \$login,
-    'password|p=s'   => \$password,
-    'directory|d=s'  => \$directory,
-    'output|o=s'     => \$output,
-    'help|h'         => \$help);
+    'action|a=s'       => \$action,
+    'host|t=s'         => \$host,
+    'login|l=s'        => \$login,
+    'password|p=s'     => \$password,
+    'directory|d=s'    => \$directory,
+    'output|o=s'       => \$output,
+    'gmail_login=s'    => \$gmail_login,
+    'gmail_password=s' => \$gmail_password,
+    'help|h'           => \$help);
 
 sub display_help
 {
     die <<END;
 usage : deploy.pl -a [see|update|clean]
-                  -h HOST NAME
+                  -t HOST NAME
                   -l LOGIN NAME
                   -p PASSWORD
                   -d DIRECTORY
 		  -o OUTPUT
+		  --gmail_login GMAIL_LOGIN
+		  --gmail_password GMAIL_PASSWORD
                   -h this help
 END
 }
 
-display_help() if $help;
+display_help() if defined $help;
 
 # action by default is update
 $action //= 'update';
@@ -93,6 +98,9 @@ sub replace_link
     symlink($dst, $src);
 }
 
+$AUTHORISED{php} = 1 if defined $gmail_login or defined $gmail_password;
+
+
 my %files;
 read_directory($directory, \%files);
 
@@ -117,6 +125,9 @@ unless (defined $login and defined $password and defined $host)
     display_help();
 }
 
+# display_help() if (defined $gmail_login and not defined $gmail_password)
+#     or (defined $gmail_login and defined $gmail_password);
+
 my @to_delete;
 
 my $action_before = sub
@@ -130,8 +141,6 @@ my $action_before = sub
     open($html, "divebar.html.sav") or die "file 'divebar.html' not found!";
     my @lines = <$html>;
     close $html;
-
-    my @new_lines;
 
     while (@to_compress)
     {
@@ -184,6 +193,30 @@ my $action_before = sub
     open($html, ">divebar.html") || die "file 'divebar.html' not found!";
     print {$html} @lines;
     close($html);
+
+    return unless defined $gmail_login;
+
+    # we save the php contact file
+    move "php/contact.php", "php/contact.php.sav";
+
+    my $php;
+
+    # we get php content
+    open($php, "php/contact.php.sav") or die "file 'php/contact.php' not found!";
+    @lines = <$php>;
+    close $php;
+
+    my $i = 0;
+    foreach (@lines)
+    {
+	$_ =~ s/%MAIL%/$gmail_login/g;
+	$_ =~ s/%PASSWORD%/$gmail_password/g;
+	$lines[$i++] = $_;
+    }
+
+    open($php, ">php/contact.php") || die "file 'php/contact.php' not found!";
+    print {$php} @lines;
+    close($php);
 };
 
 my $action_after = sub
@@ -195,6 +228,9 @@ my $action_after = sub
     {
 	unlink $file;
     }
+
+
+    move "php/contact.php.sav", "php/contact.php" if defined $gmail_login;
 };
 
 # we try to establish connection

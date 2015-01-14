@@ -1,10 +1,10 @@
 <?php
 
-require_once 'swiftmailer/lib/swift_required.php';
+require_once("PHPMailer/PHPMailerAutoload.php");
 
 if(isset($_POST['contact_email'])) {
 
-    $email_to = "divebartheband@gmail.com";
+    $email_to = "%MAIL%";
     $email_subject = "Site Web Dive Bar : nouveau message!!";
 
     function died($error) {
@@ -44,37 +44,38 @@ if(isset($_POST['contact_email'])) {
 	died($error_message);
     }
 
-    $email_message = "Voici le nouveau message:\n\n";
+    $email_message = "Name: " . $name . "\n";
+    $email_message .= "Email: " . $email_from . "\n";
+    $email_message .= "Message: " . $comments . "\n";
 
-    function clean_string($string) {
-	$bad = array("content-type","bcc:","to:","cc:","href");
-	return str_replace($bad,"",$string);
+    $mail = new PHPMailer();
+
+    $mail->IsSMTP();                 // set mailer to use SMTP
+    $mail->Host = "smtp.gmail.com";  // specify main and backup server
+    $mail->Port = 465;
+    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPAuth = true;          // turn on SMTP authentication
+    $mail->Username = $email_to;     // SMTP username
+    $mail->Password = "%PASSWORD%";    // SMTP password
+
+    $mail->SetFrom($email_from, $name);
+    $mail->AddAddress($email_from, $name);
+
+    $mail->WordWrap = 50;            // set word wrap to 50 characters
+
+    $mail->Subject = "Nouveau message du site web!";
+    $mail->Body    = $email_message;
+
+    // $mail->SMTPDebug = 1;
+
+    if ($mail->Send())
+    {
+	echo "Message envoyé! Nous vous recontacterons sous peu!";
     }
-
-    $email_message .= "Name: " . clean_string($name) . "\n";
-    $email_message .= "Email: " . clean_string($email_from) . "\n";
-    $email_message .= "Message: " . clean_string($comments) . "\n";
-
-    // create email headers
-    $headers = "From: " . $email_from . "\r\n"
-	     . "Reply-To: " . $email_from . "\r\n"
-	     . "MIME-Version: 1.0\r\n"
-	     . "X-Priority: 3\r\n"
-	     . 'X-Mailer: PHP/' . phpversion();
-
-
-    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-                   ->setUsername($email_to)
-		   ->setPassword('');
-
-    $mailer = Swift_Mailer::newInstance($transport);
-
-    $message = Swift_Message::newInstance($email_subject)
-		   ->setFrom(array($email_to => $email_subject))
-		   ->setTo(array($email_to))
-		   ->setBody($email_message);
-
-    $result = $mailer->send($message);
+    else
+    {
+	echo "Echec d'envoi de l'email: " . $mail->ErrorInfo;
+    }
 
     die();
 }

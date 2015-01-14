@@ -39,7 +39,7 @@ class TestContact extends PHPUnit_Framework_TestCase
 	$this->assertEquals(
 	    $this->post("http://localhost/divebar/php/contact.php",
 			"contact_name=leo&contact_email=lmartin@gmail.com&contact_msg=test"),
-	    "Echec d'envoi de l'email!");
+	    "Message envoyé! Nous vous recontacterons sous peu!");
     }
 }
 

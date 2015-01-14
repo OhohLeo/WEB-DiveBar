@@ -203,28 +203,27 @@ $(window).load(function() {
 	$(this).next("div").fadeIn(1000);
     });
 
-    var $contact_result = $("div#contact_result");
-    var $contact = $("input#contact");
+    var $contact_result = $("p#contact_result");
+    var $contact = $("form#contact");
 
-    $contact_result.hide();
-
-    $contact.on("click", function() {
-
-	console.log("HERE??" + $("form#contact").serialize());
-
+    $contact.on("submit", function($event) {
+	$event.preventDefault();
+	console.log($(this).serialize());
 	$.ajax({
 	    type: "POST",
 	    url: "php/contact.php",
-	    data: $("form#contact").serialize(),
-	    dataType: "json",
+	    data: $(this).serialize(),
+	    dataType: "text",
 	    success: function($result) {
-		console.log("HEY!" + $result);
-		/* $contact_result.empy();
-		   $contact_result.append($result);
-		   $contact_result.show(); */
+		$contact_result.html($result);
+		$contact_result.show();
+		console.log($result);
 	    },
 	    error: function($obj, $msg, $error) {
-		console.log("ERROR! " + $msg + " " + $error);
+		var $result = $msg + " " + $error;
+		$contact_result.html($result);
+		$contact_result.show();
+		console.log($result);
 	    },
 	});
     });

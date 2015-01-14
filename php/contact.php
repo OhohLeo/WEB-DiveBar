@@ -22,9 +22,9 @@ if(isset($_POST['contact_email'])) {
 	die();
     }
 
-    $name = $_POST['contact_name']; // required
-    $email_from = $_POST['contact_email']; // required
-    $comments = $_POST['contact_msg']; // required
+    $name = urldecode($_POST['contact_name']); // required
+    $email_from = urldecode($_POST['contact_email']); // required
+    $comments = urldecode($_POST['contact_msg']); // required
 
     $error_message = "";
 
@@ -83,4 +83,3 @@ if(isset($_POST['contact_email'])) {
 echo "Nous sommes désolés, mais tous les champs sont requis!";
 
 ?>
-

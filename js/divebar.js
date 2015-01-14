@@ -202,4 +202,30 @@ $(window).load(function() {
 	console.log("CLICK " + $(this).next("div").attr('class'));
 	$(this).next("div").fadeIn(1000);
     });
+
+    var $contact_result = $("div#contact_result");
+    var $contact = $("input#contact");
+
+    $contact_result.hide();
+
+    $contact.on("click", function() {
+
+	console.log("HERE??" + $("form#contact").serialize());
+
+	$.ajax({
+	    type: "POST",
+	    url: "php/contact.php",
+	    data: $("form#contact").serialize(),
+	    dataType: "json",
+	    success: function($result) {
+		console.log("HEY!" + $result);
+		/* $contact_result.empy();
+		   $contact_result.append($result);
+		   $contact_result.show(); */
+	    },
+	    error: function($obj, $msg, $error) {
+		console.log("ERROR! " + $msg + " " + $error);
+	    },
+	});
+    });
 });

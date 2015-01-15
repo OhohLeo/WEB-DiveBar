@@ -209,7 +209,6 @@ my $action_before = sub
     my $i = 0;
     foreach (@lines)
     {
-	$_ =~ s,PHPMailer\/,/php\/PHPMailer\/,g;
 	$_ =~ s/%MAIL%/$gmail_login/g;
 	$_ =~ s/%PASSWORD%/$gmail_password/g;
 	$lines[$i++] = $_;

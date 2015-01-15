@@ -1,6 +1,6 @@
 <?php
 
-require_once("PHPMailer/PHPMailerAutoload.php");
+include("PHPMailer/PHPMailerAutoload.php");
 
 if(isset($_POST['contact_email'])) {
 

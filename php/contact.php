@@ -1,7 +1,5 @@
 <?php
 
-include("PHPMailer/PHPMailerAutoload.php");
-
 if(isset($_POST['contact_email'])) {
 
     $email_to = "%MAIL%";
@@ -48,29 +46,9 @@ if(isset($_POST['contact_email'])) {
     $email_message .= "Email: " . $email_from . "\n";
     $email_message .= "Message: " . $comments . "\n";
 
-    $mail = new PHPMailer();
-
-    $mail->IsSMTP();                 // set mailer to use SMTP
-    $mail->Host = "smtp.gmail.com";  // specify main and backup server
-    $mail->Port = 465;
-    $mail->SMTPSecure = 'ssl';
-    $mail->SMTPAuth = true;          // turn on SMTP authentication
-    $mail->Username = $email_to;     // SMTP username
-    $mail->Password = "%PASSWORD%";    // SMTP password
-
-    $mail->SetFrom($email_from, $name);
-    $mail->AddAddress($email_from, $name);
-
-    $mail->WordWrap = 50;            // set word wrap to 50 characters
-
-    $mail->Subject = "Nouveau message du site web!";
-    $mail->Body    = $email_message;
-
-    // $mail->SMTPDebug = 1;
-
-    if ($mail->Send())
+    if (mail($email_to, $email_subject, $email_message))
     {
-	echo "Message envoyé! Nous vous recontacterons sous peu!";
+	echo "Merci! Nous vous recontacterons sous peu!";
     }
     else
     {

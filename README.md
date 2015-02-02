@@ -3,6 +3,9 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+15/01/2015 Leo
+ * fonctionnement du formulaire de contact
+
 13/01/2015 Leo
  * ajout du formulaire de contact
 

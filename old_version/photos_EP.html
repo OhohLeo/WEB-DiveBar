@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dive Bar</title>
+	<meta charset="utf-8">
+	
+<!-- SlidesJS Optional: If you'd like to use this design -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+      padding-top:70px;
+	  background-color: #000000;
+    }
+
+    #slides {
+      display: none;
+      margin-bottom:50px;
+    }
+
+    .slidesjs-navigation {
+      margin-top:3px;
+    }
+
+    .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(test_folio/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    a:link,
+    a:visited {
+      color: #333
+    }
+
+    a:hover,
+    a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+	<style>
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+  </style>
+  <!-- SlidesJS Required: -->
+  
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="all"> 
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<style>
+body{ 
+	margin:0;
+	padding:0;
+	background: url(fr.jpg) no-repeat center fixed;
+	background-color:black
+	}
+</style>
+</head>
+
+<body id="page1">
+<div class="bg1">
+<div class="main">
+<!--HEADER-->
+<header>
+	<nav>
+		<ul id="menu">
+			<li><a href="http://divebartheband.com/">Notre Univers</a></li>
+			<li class="active"><a href="Photos.html">Photos</a></li>
+			<li><a href="Videos.html">Videos</a></li>
+			<li><a href="News.html">News</a></li>
+			<li><a href="Contacts.php">Contacts</a></li>
+		</ul>
+	</nav>
+</header>
+<!--HEADER END-->
+<div class="box">
+<article id="content">
+	<div class="wrapper pad_bot1">
+
+
+
+	<!--GALLERY-->
+<h2>L'EP de Dive Bar - in progress</h2>
+<h5>Enregistrement à Mercury [23-28/02/2013] et mix à Grenoble [22-25/06/2013]</h5>
+<h6 align='right'><a href="photos.html">Retour</a></h6>
+			<div id="slides">
+				<img src="folio/EP/EP_1.jpg" alt="">
+				<img src="folio/EP/EP_2.jpg" alt="">
+				<img src="folio/EP/EP_3.jpg" alt="">
+				<img src="folio/EP/EP_4.jpg" alt="">
+				<img src="folio/EP/EP_5.jpg" alt="">
+				<img src="folio/EP/EP_6.jpg" alt="">
+				<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
+				<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
+			</div>
+	 
+	<!--GALLERY end-->
+	  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	  <script src="test_folio/jquery.slides.min.js"></script>
+	  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+	  <script>
+		$(function() {
+		  $('#slides').slidesjs({
+			width: 403,
+			height: 268,
+			navigation: false,
+			start: 1,
+			play: {
+			  auto: false
+			}
+		  });
+		});
+	  </script>
+	  <!-- End SlidesJS Required -->
+	</div>
+<!--FOOTER -->
+	<footer>
+		<h2>Restez avec nous</h2>
+			<ul id="icons">
+				<li><a href="http://www.facebook.com/pages/Dive-Bar/295570962262" target="_blank" class="normaltip" title="Facebook"><img alt="" src="images/icon1.png" /></a></li>
+				<li><a href="https://soundcloud.com/dive-bar" target="_blank" class="normaltip" title="SoundCloud"><img alt="" src="images/icon2.jpg" /></a></li>
+				<li><a href="https://myspace.com/divebartheband" target="_blank" class="normaltip" title="Myspace"><img alt="" src="images/icon3.jpeg" /></a></li>
+			</ul>
+	</footer>
+<!--FOOTER end-->
+			
+</article>			
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+BODY      { font-family: Helvetica, Verdana; font-size: 13px; color: #5A6BA5 }
+TD        { font-family: Helvetica, Verdana; font-size: 13px; color: #20316A }
+TD.livre  { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF }
+
+A.erreur  { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF; font-weight: bold; background: #ED1015 }
+A.titre   { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF; font-weight: bold; background: #354785 }
+A.ok      { font-family: Helvetica, Verdana; font-size: 13px; color: #1C2D67; font-weight: bold; background: #FDF9AA }
+A.heure   { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF; font-weight: bold; background: #354785 }
+A.date { font-family: Helvetica, Verdana; font-size: 13px; color: #0540FD; font-weight: bold; text-decoration: none }
+
+A         { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF }
+A:link    { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF; font-weight: normal; text-decoration: none }
+A:visited { font-family: Helvetica, Verdana; font-size: 13px; color: #FFFFFF; font-weight: normal; text-decoration: none }
+A:hover   { font-family: Helvetica, Verdana; font-size: 13px; color: #FDFC65; font-weight: normal; text-decoration: underline }
+
+A.email         { color: #0540FD; font-weight: bold; text-decoration: none }
+A.email:link    { color: #0540FD; font-weight: bold; text-decoration: none }
+A.email:visited { color: #0540FD; font-weight: bold; text-decoration: none }
+A.email:hover   { color: #0540FD; font-weight: bold; text-decoration: underline }

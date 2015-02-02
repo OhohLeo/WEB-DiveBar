@@ -1,0 +1,36 @@
+# -------------------------------------------------------------------------- #
+# J-Pierre DEZELUS : jpdezelus@phpinfo.net                                   #
+# -------------------------------------------------------------------------- #
+# Site Web : http://www.phpinfo.net/                                         #
+# -------------------------------------------------------------------------- #
+# Site d'information PHP / MySQL. Exemples, trucs et astuces, docs, liens,   #
+# programmes PHP complets a telecharger, FAQ, manuels, scripts. Pour tout    #
+# savoir sur PHP et MySQL.                                                   #
+# -------------------------------------------------------------------------- #
+# Application : Le Livre d'Or                                                #
+# -------------------------------------------------------------------------- #
+
+Quelques consignes pour faire fonctionner l'application :
+
+  - créer la table 'livredor' dans la base MySQL à partir du fichier 
+    'livredor.sql' situé dans le répertoire table-SQL.
+
+  - renseigner le fichier de config 'conf/cfg-phpinfo.inc.php3' avec les
+    bonnes valeurs (base, hôte, user, password).
+
+  - ouvrir dans le navigateur le fichier index.php3 (ou index.php3?rub=signer)
+    pour signer le livre d'or, ou index.php3?rub=voir pour afficher les
+    signatures
+
+# -------------------------------------------------------------------------- #
+# Versions
+# -------------------------------------------------------------------------- #
+
+26.09.2001 v1.0.1
+- détection et activation des URL dans les messages
+- meilleure gestion des sauts de ligne saisis (merci Perrich)
+- correction de la fonction de validation d'une @ email
+- suppression des tags HTML saisis
+
+19.03.2000 v1.0
+- 1ère version 'publique'.

@@ -3,6 +3,10 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+03/02/2015 Leo
+ * 1ère diffusion du site
+ * ajout des méta-données pour Google, Twitter & Facebook
+
 02/02/2015 Leo
  * sauvegarde de l'ancienne version du site
  * ajout des biographies

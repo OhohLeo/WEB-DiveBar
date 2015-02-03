@@ -3,6 +3,11 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+02/02/2015 Leo
+ * sauvegarde de l'ancienne version du site
+ * ajout des biographies
+ * ajout du symbole pointeur sur les titres des paroles
+
 15/01/2015 Leo
  * fonctionnement du formulaire de contact
 

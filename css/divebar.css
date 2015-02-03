@@ -48,7 +48,7 @@ div#message {
 iframe.videos {
     width: 220px;
     height: 180px;
-    margin-left: 24%;
+    margin-left: 12%;
     margin-bottom: 2%;
     border-width: 1px;
     border-style: solid;
@@ -168,7 +168,7 @@ div#news, div#albums {
 div.biography {
     display: block;
     width: 40%;
-    margin-top: 15%;
+    margin-top: 10%;
     padding: 0;
     border: 0;
     text-align: justify;
@@ -411,6 +411,10 @@ h2 {
     font-size: 30px;
     font-family: 'PT Sans', Arial;
     color: #FFF;
+}
+
+h2.lyrics {
+    cursor: pointer;
 }
 
 p {

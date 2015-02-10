@@ -46,9 +46,9 @@ div#message {
 }
 
 iframe.videos {
-    width: 240px;
+    width: 220px;
     height: 180px;
-    margin-left: 13%;
+    margin-left: 24%;
     margin-bottom: 2%;
     border-width: 1px;
     border-style: solid;
@@ -411,10 +411,6 @@ h2 {
     font-size: 30px;
     font-family: 'PT Sans', Arial;
     color: #FFF;
-}
-
-h2.lyrics {
-    cursor: pointer;
 }
 
 p {

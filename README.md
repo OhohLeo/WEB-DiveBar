@@ -3,6 +3,13 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+10/02/2015 Leo
+ * ajout du concert au Abradacadabar
+ * correction de la bio de Jérémie
+ * correction bug du iframe
+ * ajout du favicon.ico
+ * correction du deploy.pl : utilisation du index.html
+
 03/02/2015 Leo
  * 1ère diffusion du site
  * ajout des méta-données pour Google, Twitter & Facebook

@@ -76,7 +76,7 @@ sub read_directory
 	    read_directory($url, $files, 1);
 	}
 	elsif (-f $url and $filename =~
-	       /\.(html|php|js|css|eot|svg|ttf|woff|png|jpg|gif)+$/)
+	       /\.(html|php|js|css|eot|svg|ttf|woff|png|jpg|gif|ico)+$/)
 	{
 	    # we detect all js & css files
 	    push(@to_compress, $directory, $filename)
@@ -190,9 +190,18 @@ my $action_before = sub
 	push(@to_delete, "$directory/$new_filename");
     }
 
-    open($html, ">divebar.html") || die "file 'divebar.html' not found!";
+    open($html, '>divebar.html') or die "file 'divebar.html' not found!";
     print {$html} @lines;
     close($html);
+
+    # we replace divebar.html > index.html
+    unless (defined $output)
+    {
+	move "divebar.html", "index.html";
+	delete $files{$directory}{'divebar.html'};
+	$files{$directory}{'index.html'} = undef;
+	push(@to_delete, "$directory/index.html");
+    }
 
     return unless defined $gmail_login;
 

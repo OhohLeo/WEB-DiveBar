@@ -243,6 +243,11 @@ p.random {
     color: rgb(161, 93, 87);
 }
 
+.img_middle {
+    text-align: center;
+    margin: 0;
+}
+
 .img_news, .img_albums .img.members {
     float: left;
 }

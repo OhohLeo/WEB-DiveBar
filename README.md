@@ -3,6 +3,9 @@ WEB-DiveBar
 
 Dive Bar website sources
 
+20/05/2015 Leo
+ * ajout du concert L'Entrepot
+
 10/02/2015 Leo
  * ajout du concert au Abradacadabar
  * correction de la bio de Jérémie
